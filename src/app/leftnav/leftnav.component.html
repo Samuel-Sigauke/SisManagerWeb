@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">STUDENT SYSTEM</h1>
+</mat-toolbar>
+<mat-sidenav-container color="primary" class="example-container" autosize>
+	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
+		<mat-nav-list>
+			<mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+				<span class="full-width" *ngIf="isExpanded || isShowing">Students</span>
+				<mat-icon mat-list-icon>home</mat-icon>
+				<mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+			</mat-list-item>
+			<div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+				<a mat-list-item routerLink="/student/create" routerLinkActive="active"> Add Student </a>
+				<a mat-list-item routerLink="/student/list" routerLinkActive="active"> List Students </a>
+				<a mat-list-item routerLink="/subject/create" routerLinkActive="active"> Add Subject </a>
+				<a mat-list-item routerLink="/subject/list" routerLinkActive="active"> List Subjects </a>
+				<a mat-list-item routerLink="/teacher/create" routerLinkActive="active"> Add Teacher </a>
+				<a mat-list-item routerLink="/teacher/list" routerLinkActive="active"> List Teacher </a>
+				<!-- <a mat-list-item href="http://localhost:4200/#/teacher/list"> List Teacher </a>
+				<a mat-list-item href="http://localhost:4200/#/student/create">Add Student</a>
+				<a mat-list-item href="http://localhost:4200/#/student/list">List Students</a>
+				<a mat-list-item href="http://localhost:4200/#/subject/create">Add Subject</a>
+				<a mat-list-item href="http://localhost:4200/#/subject/list">List Subjects</a>
+				<a mat-list-item href="http://localhost:4200/#/teacher/create"> Add Teacher </a>
+				<a class="main-nav__link" routerLink="['/']" routerLinkActive="active">Home</a> -->
+				<mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
+					<span class="full-width" *ngIf="isExpanded || isShowing">Nested Menu</span>
+					<mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+				</mat-list-item>
+				<div class="submenu" [ngClass]="{'expanded' : showSubSubMenu}" *ngIf="isShowing || isExpanded">
+					<mat-list-item>SubSubmenu Item 1</mat-list-item>
+					<mat-list-item>SubSubmenu Item 2</mat-list-item>
+				</div>
+			</div>
+    </mat-nav-list>
+    
+    <mat-nav-list>
+    </mat-nav-list>
+
+	</mat-sidenav>
+
+	<div class="example-sidenav-content">
+		<router-outlet></router-outlet>
+	</div>
+
+</mat-sidenav-container>
+
+
+
+
