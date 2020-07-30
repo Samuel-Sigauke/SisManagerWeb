@@ -1,0 +1,54 @@
+.container {
+    width: 95%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0%;
+    box-shadow: 1px 3px 3px #044aba;
+}
+
+table {
+    width: 100%;
+}
+  
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.detail {
+    margin-left: 15%;
+    display: inline-block;
+}
+
+.row {
+    margin-top: 1%;
+}
+
+.subjects {
+    margin-top: 1%;
+    margin-left: 5%;
+    width: 100%;
+}
+
+.name {
+    width: 25%;
+    margin-top: 3%;
+    margin-left: 2%;
+    display: inline-block;
+    box-shadow: 3px 3px 3px 3px #044aba;
+}
+
+.marks {
+    font-weight: bold;
+    font-size: 140%;
+    margin-top: 2%;
+    margin-left: 15%;
+    display: inline-block;
+}
+
+.btn {
+    color: black;
+    margin-left: 10%;
+    margin-top: 3%;
+}

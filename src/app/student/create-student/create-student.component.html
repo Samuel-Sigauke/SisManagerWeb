@@ -1,0 +1,97 @@
+<div class="container">
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title class="title-card-centre">Student Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="studentForm" class="form">
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="" formControlName="name" required>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" style="margin-left: 3%;">
+            <mat-label>Surname</mat-label>
+            <input matInput placeholder="" formControlName="surname" required>
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" style="margin-left: 3%;">
+            <mat-label>Student Number</mat-label>
+            <input matInput placeholder="" formControlName="studentNumber" required>
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Class</mat-label>
+            <!-- <input matInput placeholder="" formControlName="class" required> -->
+            <mat-select formControlName="class" >
+              <mat-option value="option">Grade 1</mat-option>
+              <mat-option value="option1">Grade 2</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="button">
+          <button mat-raised-button color="primary" (click)="onSave(studentForm.value)"> Save </button>
+          <button mat-raised-button color="warn" style="margin-left: 20%;" (click)="onClear(studentForm.value)"> Clear </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+ <!--  <form [formGroup]="studentForm" class="form">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="" formControlName="name" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="margin-left: 3%;">
+        <mat-label>Surname</mat-label>
+        <input matInput placeholder="" formControlName="surname" required>
+      </mat-form-field>
+    </div>
+    <br>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput placeholder="" formControlName="dob" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" style="margin-left: 3%;">
+        <mat-label>Student Number</mat-label>
+        <input matInput placeholder="" formControlName="studentNumber" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Class</mat-label>
+        <input matInput placeholder="" formControlName="class" required>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill"
+        [hideRequiredMarker]="hideRequiredControl.value"
+        [floatLabel]="floatLabelControl.value">
+      <mat-select required>
+        <mat-option>-- None --</mat-option>
+        <mat-option value="option">Option</mat-option>
+      </mat-select>
+      <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label>
+    </mat-form-field>
+  </form>  -->
+</div>

@@ -1,0 +1,209 @@
+<div class="container">
+  <mat-card >
+    <div>
+      
+    </div>
+    <mat-card-header>
+      <mat-card-title class="title-card-centre">Student Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="detail">
+          <mat-label style="font-size: 16px; font-weight: bold;">Fullname: </mat-label>
+          Jay Cole
+        </div>
+        <div class="detail">
+          <mat-label style="font-size: 16px; font-weight: bold;">Student#: </mat-label>
+          JC9810
+        </div>
+        <div class="detail">
+          <mat-label style="font-size: 16px; font-weight: bold;">Class: </mat-label>
+          Grade 6
+        </div>
+      </div>
+
+      <div class="subjects">
+        <mat-card class="name">
+          <mat-card-header>
+            <mat-card-title> Agriculture </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label class="marks"> Test 1</mat-label>
+            57%
+            <mat-label class="marks"> Test 2</mat-label>
+            70%
+            <br>
+            <mat-label class="marks"> Test 3</mat-label>
+            65%
+            <mat-label class="marks"> Test 4</mat-label>
+            88%
+            <br>
+            <mat-label class="marks"> Exam Result </mat-label>
+            68%
+            <button mat-mini-fab color="primary" (click)="openDialog(newMark)" aria-label="Click to add marks" class="btn">
+              <!-- <span class="material-icons">add</span> -->
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card  class="name">
+          <mat-card-header>
+            <mat-card-title> English </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label class="marks"> Test 1</mat-label>
+            57%
+            <mat-label class="marks"> Test 2</mat-label>
+            70%
+            <br>
+            <mat-label class="marks"> Test 3</mat-label>
+            65%
+            <mat-label class="marks"> Test 4</mat-label>
+            88%
+            <br>
+            <mat-label class="marks"> Exam Result </mat-label>
+            68%
+            <button mat-mini-fab color="primary" (click)="openDialog(newMark)" aria-label="Click to add marks" class="btn">
+              <!-- <span class="material-icons">add</span> -->
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card  class="name">
+          <mat-card-header>
+            <mat-card-title>Science </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label class="marks"> Test 1</mat-label>
+            57%
+            <mat-label class="marks"> Test 2</mat-label>
+            70%
+            <br>
+            <mat-label class="marks"> Test 3</mat-label>
+            65%
+            <mat-label class="marks"> Test 4</mat-label>
+            88%
+            <br>
+            <mat-label class="marks"> Exam Result </mat-label>
+            68%
+            <button mat-mini-fab color="primary" (click)="openDialog(newMark)" aria-label="Click to add marks" class="btn">
+              <!-- <span class="material-icons">add</span> -->
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card  class="name">
+          <mat-card-header>
+            <mat-card-title> Heritage </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label class="marks"> Test 1</mat-label>
+            57%
+            <mat-label class="marks"> Test 2</mat-label>
+            70%
+            <br>
+            <mat-label class="marks"> Test 3</mat-label>
+            65%
+            <mat-label class="marks"> Test 4</mat-label>
+            88%
+            <br>
+            <mat-label class="marks"> Exam Result </mat-label>
+            68%
+            <button mat-mini-fab color="primary" (click)="openDialog(newMark)" aria-label="Click to add marks" class="btn">
+              <!-- <span class="material-icons">add</span> -->
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-card-content>
+        </mat-card>
+  
+        <mat-card  class="name">
+          <mat-card-header>
+            <mat-card-title> IsiNdebele </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label class="marks"> Test 1</mat-label>
+            57%
+            <mat-label class="marks"> Test 2</mat-label>
+            70%
+            <br>
+            <mat-label class="marks"> Test 3</mat-label>
+            65%
+            <mat-label class="marks"> Test 4</mat-label>
+            88%
+            <br>
+            <mat-label class="marks"> Exam Result </mat-label>
+            68%
+            <button mat-mini-fab color="primary" (click)="openDialog(newMark)" aria-label="Click to add marks" class="btn">
+              <!-- <span class="material-icons">add</span> -->
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card  class="name">
+          <mat-card-header>
+            <mat-card-title> Maths </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-label class="marks"> Test 1</mat-label>
+            57%
+            <mat-label class="marks"> Test 2</mat-label>
+            70%
+            <br>
+            <mat-label class="marks"> Test 3</mat-label>
+            65%
+            <mat-label class="marks"> Test 4</mat-label>
+            88%
+            <br>
+            <mat-label class="marks"> Exam Result </mat-label>
+            68%
+            <button mat-mini-fab color="primary" (click)="openDialog(newMark)" aria-label="Click to add marks" class="btn">
+              <!-- <span class="material-icons">add</span> -->
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-card-content>
+        </mat-card>
+
+      </div>
+      <!-- <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+      </mat-grid-list> -->
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #newMark>
+  <h1 mat-dialog-title>Add new Test Mark</h1>
+  <div mat-dialog-content class="mat-dialog-content">
+    <form [formGroup]="marksForm" class="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Subject</mat-label>
+        <mat-select formControlName="subject" required>
+          <mat-option value="Agriculture">Agriculture</mat-option>
+          <mat-option value="English">English</mat-option>
+          <mat-option value="Heritage">Heritage</mat-option>
+          <mat-option value="IsiNdebele">IsiNdebele</mat-option>
+          <mat-option value="Maths">Maths</mat-option>
+          <mat-option value="Science">Science</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Mark</mat-label>
+        <input matInput formControlName="mark" required>
+      </mat-form-field>
+    </form>
+    <button mat-raised-button color="primary" (click)="onSave(marksForm.value)" style="margin-left: 15%;"> Save </button>
+    <button mat-raised-button color="warn" style="margin-left: 20%;" (click)="onClose(marksForm.value)"> Close </button>
+    <p></p>
+    <!-- <div mat-dialog-actions  class="mat-dialog-actions">
+      <button mat-raised-button color="primary" (click)="onSave(marksForm.value)"> Save </button>
+      <button mat-raised-button color="warn" style="margin-left: 20%;" (click)="onClose(marksForm.value)"> Close </button>
+    </div> -->
+  </div>
+</ng-template>
