@@ -1,0 +1,41 @@
+<div class="container">
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title class="title-card-centre">Add New Subject</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <form [formGroup]="subjectForm" class="form">
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Subject Name</mat-label>
+            <input matInput placeholder="" formControlName="name" required>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" style="margin-left: 3%;">
+            <mat-label>Subject Code</mat-label>
+            <input matInput placeholder="" formControlName="code" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Write Subject description here" formControlName="description" required> </textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" style="margin-left: 3%;">
+            <mat-label> Upload Scheme</mat-label>
+            <ngx-mat-file-input formControlName="file" [multiple]="multiple" [accept]="accept" [color]="color">
+            </ngx-mat-file-input>
+          </mat-form-field>
+        </div>
+
+        <div class="button">
+          <button mat-raised-button color="primary" (click)="onSave(subjectForm.value)"> Save </button>
+          <button mat-raised-button color="warn" style="margin-left: 20%;" (click)="onClear(subjectForm.value)"> Clear </button>
+        </div>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>
