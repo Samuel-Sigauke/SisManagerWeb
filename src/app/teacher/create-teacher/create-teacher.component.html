@@ -1,0 +1,54 @@
+<div class="container">
+  <mat-card >
+    <mat-card-header>
+      <mat-card-title class="title-card-centre">Add Teacher Details</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="teacherForm" class="form">
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="" formControlName="name" required>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" style="margin-left: 3%;">
+            <mat-label>Surname</mat-label>
+            <input matInput placeholder="" formControlName="surname" required>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Registration Number</mat-label>
+            <input matInput placeholder="" formControlName="regnumber" required>
+          </mat-form-field>
+      
+          <mat-form-field appearance="fill" style="margin-left: 3%;">
+            <mat-label>ID Number</mat-label>
+            <input matInput placeholder="" formControlName="nationalid" required>
+          </mat-form-field>
+        </div>
+    
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Designated Class</mat-label>
+            <mat-select formControlName="classtag" >
+              <mat-option value="G1B">Grade 1 Blue </mat-option>
+              <mat-option value="G1G">Grade 1 Green</mat-option>
+              <mat-option value="G2Y">Grade 2 Yellow </mat-option>
+              <mat-option value="G2G">Grade 2 Green</mat-option>
+              <mat-option value="G3Y">Grade 3 Yellow </mat-option>
+              <mat-option value="G3G">Grade 3 Green</mat-option>
+              <mat-option value="G4B">Grade 4 Blue </mat-option>
+              <mat-option value="G4G">Grade 4 Green</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="button">
+          <button mat-raised-button color="primary" (click)="onSave(teacherForm.value)"> Save </button>
+          <button mat-raised-button color="warn" style="margin-left: 20%;" (click)="onClear(teacherForm.value)"> Clear </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

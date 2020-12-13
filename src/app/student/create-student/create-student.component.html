@@ -20,7 +20,7 @@
         <div>
           <mat-form-field appearance="fill">
             <mat-label>Date of Birth</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <input matInput [matDatepicker]="picker" formControlName="dateofbirth">
             <mat-datepicker-toggle matSuffix [for]="picker">
               <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
             </mat-datepicker-toggle>
@@ -29,7 +29,7 @@
       
           <mat-form-field appearance="fill" style="margin-left: 3%;">
             <mat-label>Student Number</mat-label>
-            <input matInput placeholder="" formControlName="studentNumber" required>
+            <input matInput placeholder="" formControlName="studentnumber" required>
           </mat-form-field>
         </div>
     
@@ -37,9 +37,15 @@
           <mat-form-field appearance="fill">
             <mat-label>Class</mat-label>
             <!-- <input matInput placeholder="" formControlName="class" required> -->
-            <mat-select formControlName="class" >
-              <mat-option value="option">Grade 1</mat-option>
-              <mat-option value="option1">Grade 2</mat-option>
+            <mat-select formControlName="classtag" >
+              <mat-option value="G1B">Grade 1 Blue </mat-option>
+              <mat-option value="G1G">Grade 1 Green</mat-option>
+              <mat-option value="G2Y">Grade 2 Yellow </mat-option>
+              <mat-option value="G2G">Grade 2 Green</mat-option>
+              <mat-option value="G3Y">Grade 3 Yellow </mat-option>
+              <mat-option value="G3G">Grade 3 Green</mat-option>
+              <mat-option value="G4B">Grade 4 Blue </mat-option>
+              <mat-option value="G4G">Grade 4 Green</mat-option>
             </mat-select>
           </mat-form-field>
         </div>

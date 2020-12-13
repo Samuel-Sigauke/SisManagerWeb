@@ -11,6 +11,8 @@ import { LocationStrategy, HashLocationStrategy,CommonModule } from '@angular/co
 import { LeftnavComponent } from './leftnav/leftnav.component';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     CommonModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatSidenavModule,
     MatListModule,
     MatInputModule,
@@ -38,6 +41,7 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy},
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })
